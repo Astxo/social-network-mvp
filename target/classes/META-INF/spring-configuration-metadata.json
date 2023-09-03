@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "gcs",
+      "type": "com.easydmarc.socialnetworkmvp.service.impl.GCSProperties",
+      "sourceType": "com.easydmarc.socialnetworkmvp.service.impl.GCSProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "gcs.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.easydmarc.socialnetworkmvp.service.impl.GCSProperties"
+    },
+    {
+      "name": "gcs.credentials-path",
+      "type": "java.lang.String",
+      "sourceType": "com.easydmarc.socialnetworkmvp.service.impl.GCSProperties"
+    },
+    {
+      "name": "gcs.project-id",
+      "type": "java.lang.String",
+      "sourceType": "com.easydmarc.socialnetworkmvp.service.impl.GCSProperties"
+    }
+  ],
+  "hints": []
+}
