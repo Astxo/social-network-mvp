@@ -3,6 +3,7 @@ package com.easydmarc.socialnetworkmvp.service.impl;
 import com.easydmarc.socialnetworkmvp.helper.CurrentUserProvider;
 import com.easydmarc.socialnetworkmvp.model.Friendship;
 import com.easydmarc.socialnetworkmvp.model.Post;
+import com.easydmarc.socialnetworkmvp.model.RequestStatus;
 import com.easydmarc.socialnetworkmvp.service.FriendshipService;
 import com.easydmarc.socialnetworkmvp.service.PostService;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class AuthorizationService {
 
     public boolean checkCreatePostAccess(Integer ownerId, Integer friendId) {
         Friendship friendship = friendshipService.getByUserIdOrFriendId(ownerId, friendId);
-        return friendship != null;
+        return friendship != null && friendship.getRequestStatus() == RequestStatus.ACCEPTED;
     }
 
     public boolean checkManagePostAccess(Integer postId) {
